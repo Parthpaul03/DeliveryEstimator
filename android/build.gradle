@@ -1,12 +1,15 @@
 buildscript {
     ext {
-        buildToolsVersion = "35.0.0"
-        minSdkVersion = 24
-        compileSdkVersion = 35
-        targetSdkVersion = 34
-        ndkVersion = "26.1.10909125"
-        kotlinVersion = "1.9.24"
+    buildToolsVersion = "34.0.0" // or remove this line, as it's now auto-selected
+    minSdkVersion = 24
+    compileSdkVersion = 33 // or 35
+    targetSdkVersion = 33  // or 35
+    ndkVersion = "21.4.7075529"
+    cmakeVersion = "3.10.2"
     }
+
+
+
     repositories {
         google()
         mavenCentral()
@@ -19,3 +22,10 @@ buildscript {
 }
 
 apply plugin: "com.facebook.react.rootproject"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
